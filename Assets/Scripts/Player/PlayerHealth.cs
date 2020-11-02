@@ -24,14 +24,18 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        exposure += other.GetComponent<EnemyDamage>().infectionNumber;
-        slider.GetComponent<FillBar>().CurrentValue = exposure;
+        if (other.gameObject.CompareTag("Enemy")){
+            exposure += other.GetComponent<EnemyDamage>().infectionNumber;
+            slider.GetComponent<FillBar>().CurrentValue = exposure;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        exposure += other.GetComponent<EnemyDamage>().infectionNumber;
-        slider.GetComponent<FillBar>().CurrentValue = exposure;
+        if (other.gameObject.CompareTag("Enemy")){
+            exposure += other.GetComponent<EnemyDamage>().infectionNumber;
+            slider.GetComponent<FillBar>().CurrentValue = exposure;
+        }
     }
     
 }

@@ -537,6 +537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971620137}
   - component: {fileID: 971620136}
+  - component: {fileID: 971620138}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -572,6 +573,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1839735485 &971620138
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971620135}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &986290446
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +622,8 @@ GameObject:
   - component: {fileID: 986290447}
   - component: {fileID: 986290449}
   - component: {fileID: 986290448}
+  - component: {fileID: 986290450}
+  - component: {fileID: 986290451}
   m_Layer: 0
   m_Name: Tilemap 1
   m_TagString: Untagged
@@ -3501,6 +3542,60 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &986290450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986290446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec212b9e738293448d8e81c49508145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileMap: {fileID: 0}
+  validTiles:
+  - tilemap_28
+  - tilemap_0
+  - tilemap_1
+  - tilemap_2
+  - tilemap_27
+  - tilemap_29
+  - tilemap_54
+  - tilemap_55
+  - tilemap_56
+  - tilemap_62
+  - tilemap_63
+  - tilemap_64
+  - tilemap_37
+  - tilemap_35
+  - tilemap_8
+  - tilemap_9
+  - tilemap_10
+  - tilemap_405
+  - tilemap_432
+  - tilemap_434
+  - tilemap_435
+  - tilemap_436
+  - tilemap_459
+  availableTiles: []
+--- !u!19719996 &986290451
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986290446}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &986537212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3590,6 +3685,7 @@ GameObject:
   - component: {fileID: 1004507735}
   - component: {fileID: 1004507736}
   - component: {fileID: 1004507737}
+  - component: {fileID: 1004507738}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3675,7 +3771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004507730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.75, y: 0.554, z: 0}
+  m_LocalPosition: {x: -6.312, y: 0.104, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3745,6 +3841,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exposure: 0
   slider: {fileID: 1006362889}
+--- !u!61 &1004507738
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004507730}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0014884472, y: -0.013398059}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.085566044, y: 0.13320388}
+  m_EdgeRadius: 0
 --- !u!1 &1006362886
 GameObject:
   m_ObjectHideFlags: 0
